@@ -10,7 +10,6 @@ Features
 ✅ CSV file preview
 ✅ Text files (.txt, .md)
 ✅ PowerPoint files (.ppt, .pptx) - Upcoming
-✅ Fallback to external app if unsupported
 ```
 
 ## Installation
@@ -23,7 +22,7 @@ dependencies:
 ```
 ```
 Example
-UniversalFileViewer(filePath: '/sample.pdf'),
+UniversalFileViewer(file: file),
 
 ```
 

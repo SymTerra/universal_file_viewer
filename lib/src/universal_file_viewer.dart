@@ -28,21 +28,21 @@ class UniversalFileViewer extends StatelessWidget {
       final fileType = detectFileType(file.path)!;
       switch (fileType) {
         case FileType.image:
-          return Center(child: Image.file(file));
+          return Center(child: Image.file(file)); ///supports Data usefully to support web
         case FileType.video:
           return VideoPlayerWidget(file: file);
         case FileType.pdf:
-          return PdfViewer.file(file.path);
+          return PdfViewer.file(file.path);///supports Data usefully to support web
         case FileType.word:
-          return DocxToFlutter(file: file);
+          return DocxToFlutter(file: file); ///depends on the bytes
         case FileType.excel:
-          return ExcelCSVPreviewScreen(file: file);
+          return ExcelCSVPreviewScreen(file: file); ///depends on the bytes
         case FileType.csv:
-          return ExcelCSVPreviewScreen(file: file);
+          return ExcelCSVPreviewScreen(file: file);///depends on the file as String
         case FileType.text:
-          return TxtPreviewScreen(file: file);
+          return TxtPreviewScreen(file: file); ///depends on the file as String
         case FileType.md:
-          return MdPreviewScreen(file: file);
+          return MdPreviewScreen(file: file); ///depends on the file as String
       }
     } else {
       return const Center(
