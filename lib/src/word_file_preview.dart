@@ -60,7 +60,7 @@ class DocxToFlutterState extends State<DocxToFlutter> {
                     _isZooming = true; // Keep zooming enabled
                   });
                   _transformationController.value = Matrix4.identity()
-                    ..scale(details.scale);
+                    ..scaleAdjoint(details.scale);
                 }
               }, // Detect zoom gesture end
               child: InteractiveViewer(
